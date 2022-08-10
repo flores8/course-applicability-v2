@@ -4,12 +4,12 @@ import Layout from "../components/layout"
 import * as sections from "../components/sections"
 import Fallback from "../components/fallback"
 
-export default function Homepage(props) {
-  const { homepage } = props.data
+export default function Why(props) {
+  const { whyPage } = props.data
 
   return (
-    <Layout {...homepage}>
-      {homepage.blocks.map((block) => {
+    <Layout {...whyPage}>
+      {whyPage.blocks.map((block) => {
         const { id, blocktype, ...componentProps } = block
         const Component = sections[blocktype] || Fallback
         return <Component key={id} {...componentProps} />
@@ -20,7 +20,7 @@ export default function Homepage(props) {
 
 export const query = graphql`
   {
-    homepage {
+    whyPage {
       id
       title
       description
@@ -31,15 +31,7 @@ export const query = graphql`
       blocks: content {
         id
         blocktype
-        ...HomepageHeroContent
-        ...HomepageFeatureListContent
-        ...HomepageCtaContent
-        ...HomepageLogoListContent
-        ...HomepageTestimonialListContent
-        ...HomepageBenefitListContent
-        ...HomepageStatListContent
-        ...HomepageProductListContent
-        ...HomepageBannerContent
+        ...WhyHeroContent
       }
     }
   }

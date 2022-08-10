@@ -275,6 +275,22 @@ exports.createSchemaCustomization = async ({ actions }) => {
       image: HomepageImage
     }
 
+    interface WhyPage implements Node {
+      id: ID!
+      title: String
+      description: String
+      image: HomepageImage
+      content: [HomepageBlock]
+    }
+
+    interface WhyHero implements Node & HomepageBlock {
+      id: ID!
+      blocktype: String
+      heading: String
+      text: String
+      image: HomepageImage
+    }
+
     interface AboutStat implements Node {
       id: ID!
       value: String
@@ -310,6 +326,12 @@ exports.createSchemaCustomization = async ({ actions }) => {
       links: [HomepageLink]
       logos: [HomepageLogo]
     }
+    interface HomepageBanner implements Node & HomepageBlock {
+      id: ID!
+      blocktype: String
+      heading: String
+      text: String
+    }
 
     interface Page implements Node {
       id: ID!
@@ -326,6 +348,13 @@ exports.createSchemaCustomization = async ({ actions }) => {
     type SanityHomepageLink implements Node & HomepageLink {
       id: ID!
       href: String
+      text: String
+    }
+    type SanityHomepageBanner implements Node & HomepageBanner & HomepageBlock
+      @dontInfer {
+      id: ID!
+      blocktype: String @blocktype
+      heading: String
       text: String
     }
 
@@ -504,6 +533,21 @@ exports.createSchemaCustomization = async ({ actions }) => {
       id: ID!
       header: LayoutHeader
       footer: LayoutFooter
+    }
+    type SanityWhyPage implements Node & WhyPage {
+      id: ID!
+      title: String
+      description: String
+      image: HomepageImage @link(by: "id", from: "image.asset._ref")
+      content: [HomepageBlock]
+    }
+
+    type SanityWhyHero implements Node & WhyHero & HomepageBlock {
+      id: ID!
+      blocktype: String @blocktype
+      heading: String
+      text: String
+      image: HomepageImage @link(by: "id", from: "image.asset._ref")
     }
 
     type SanityAboutPage implements Node & AboutPage {

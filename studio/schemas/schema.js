@@ -5,6 +5,7 @@ import createSchema from "part:@sanity/base/schema-creator"
 import schemaTypes from "all:part:@sanity/base/schema-type"
 
 import homepage from "./homepage"
+import homepageBanner from "./homepageBanner"
 import homepageLink from "./homepageLink"
 import homepageHero from "./homepageHero"
 import homepageFeature from "./homepageFeature"
@@ -38,6 +39,9 @@ import aboutProfile from "./aboutProfile"
 import aboutLeadership from "./aboutLeadership"
 import aboutLogoList from "./aboutLogoList"
 
+import whyPage from "./whyPage"
+import whyHero from "./whyHero"
+
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -46,6 +50,7 @@ export default createSchema({
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
     homepage,
+    homepageBanner,
     homepageLink,
     homepageHero,
     homepageFeature,
@@ -78,5 +83,8 @@ export default createSchema({
     aboutProfile,
     aboutLeadership,
     aboutLogoList,
+    // why page
+    whyPage,
+    whyHero,
   ]),
 })
