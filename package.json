@@ -1,6 +1,8 @@
 {
-  "name": "gatsby-starter-sanity-homepage",
+  "name": "course-applicability",
+  "description": "Helping education institutions comply with federally mandated course applicability.",
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "start": "gatsby develop",
     "develop": "gatsby develop",

@@ -1,34 +1,37 @@
 {
-  "name": "homepagestarter",
+  "name": "course-applicability",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
+  "author": "Lauralee Flores <lauralee@hecpartners.com>",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
-    "build": "sanity build ../static/__sanity",
-    "deploy": "sanity graphql deploy",
-    "sanity-init": "sanity init",
-    "sanity-import": "sanity dataset import ../scripts/content.tar.gz production",
-    "sanity-export": "sanity dataset export production ../scripts/content.tar.gz"
+    "build": "sanity build"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
     "@sanity/base": "^2.30.4",
-    "@sanity/cli": "^2.30.3",
     "@sanity/core": "^2.30.3",
     "@sanity/default-layout": "^2.30.4",
     "@sanity/default-login": "^2.30.4",
     "@sanity/desk-tool": "^2.30.4",
     "@sanity/eslint-config-studio": "^2.0.0",
+    "@sanity/google-maps-input": "^2.30.4",
+    "@sanity/vision": "^2.30.4",
     "eslint": "^8.6.0",
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0",
+    "react-icons": "^3.11.0",
     "styled-components": "^5.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:flores8/course-applicability-v2.git"
+  }
 }

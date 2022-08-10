@@ -1,23 +1,24 @@
 {
   "root": true,
-  "api": {
-    "dataset": "production",
-    "projectId": "xdhn4eth"
-  },
   "project": {
-    "name": "homepage-starter"
+    "name": "Course Applicability"
+  },
+  "api": {
+    "projectId": "xdhn4eth",
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "@sanity/google-maps-input"
   ],
   "env": {
-    "production": {
-      "project": {
-        "basePath": "/__sanity"
-      }
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
     }
   },
   "parts": [

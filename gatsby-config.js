@@ -4,6 +4,11 @@ require("dotenv").config({
 })
 
 module.exports = {
+  siteMetadata: {
+    title: `Course Applicability`,
+    siteUrl: `https://www.courseapplicability.com`,
+    description: `The easiest way to see which courses can be paid for with federal financial aid.`,
+  },
   plugins: [
     {
       resolve: "gatsby-source-sanity",
@@ -20,12 +25,12 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "Gatsby Starter Sanity Homepage",
-        short_name: "Gatsby",
+        name: "Course Applicability",
+        short_name: "Course Applicability",
         start_url: "/",
         // These can be imported once ESM support lands
-        background_color: "#ffe491",
-        theme_color: "#004ca3",
+        background_color: "#ffffff",
+        theme_color: "#ffffff",
         icon: "src/favicon.png",
       },
     },
