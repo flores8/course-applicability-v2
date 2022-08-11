@@ -31,6 +31,7 @@ export const query = graphql`
       blocks: content {
         id
         blocktype
+        ...WhyHeroContent
       }
     }
   }
