@@ -5,7 +5,7 @@
     "projectId": "xdhn4eth"
   },
   "project": {
-    "name": "homepage-starter"
+    "name": "course-applicability"
   },
   "plugins": [
     "@sanity/base",
