@@ -6,13 +6,10 @@ import * as styles from "../components/404.css"
 
 export default function NotFound() {
   return (
-    <Layout title="404: Page not found">
+    <Layout title="Schools">
       <Box paddingY={4}>
         <Container>
           <Flex variant="column">
-            <Heading variant="mega" className={styles.heading}>
-              Hi
-            </Heading>
             <Heading as="h1">Schools page</Heading>
             <Flex variant="column" gap={0}>
               <Text variant="lead" className={styles.text}>
